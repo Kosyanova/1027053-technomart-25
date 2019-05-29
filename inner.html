@@ -3,9 +3,14 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Cuprum&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
+    <div class="page-header-top-line">
       <a href="#" class="logo">
         <img src="/" alt="Техномарт">
       </a>
@@ -14,19 +19,21 @@
       </form>
       <ul class="top-info">
         <li>
-          <button>Закладки</button>
+          <button class="top-info-button">Закладки</button>
         </li>
         <li>
-          <button>Корзина</button>
+          <button class="top-info-button red">Корзина</button>
         </li>
         <li>
-          <button>Оформить заказ</button>
+          <button class="top-info-button green">Оформить заказ</button>
         </li>
       </ul>
+      </div>
+      <div class="top-description">
       <h1 class="heading">Интернет-магазин строительных материалови инструментов для ремонта</h1>
       <ul class="top-description">
         <li>
-          <a href="tel:+7(812)555-05-55"> +7 (812) 555-05-55 </a>
+          <a href="tel:+7(812)555-05-55" class="header-info-nomber"> +7 (812) 555-05-55 </a>
           <address class="header-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
         </li>
         <li>
@@ -35,11 +42,13 @@
               Равшан Джамшутович
               <a href="#"></a>
             </span>
+            <div class="personal-section">
             <a href="#" class="orders">Мои заказы</a>
             <a href="#" class="account">Личный кабинет</a>
           </div>
         </li>
       </ul>
+      </div>
       <nav class="main-navigation">
         <ul class="site-navigation">
           <li><a href="index.html">Главная</a></li>
@@ -57,21 +66,23 @@
         <li><span class="active">Перфораторы</span></li>
       </ul>
       <section>
-        <h2 class="heading">ПЕРФОРАТОРЫ</h2>
+        <div class="section-heading-title">
+          <h2 class="section-heading blue">ПЕРФОРАТОРЫ</h2>
+        </div>
         <aside class="filters">
-          <span>Фильтр:</span>
+          <span class="sorting-button purple">Фильтр:</span>
           <form class="filters-form" action="inner.html" method="post">
           <fieldset>
-            <legend>Цена:</legend>
-            <input type="range" name="0" value="0">
+            <legend class="sorting-price">Цена:</legend>
+            <input type="range" name="0" value="0" class="sorting-slider">
             <div class="range-value">
-              <input type="text" name="0" value="0">
-              <input type="text" name="0" value="0">
+              <input type="text" name="0" value="0"  class="left">
+              <input type="text" name="0" value="0" class="right">
             </div>
           </fieldset>
           <fieldset>
             <legend class="aside-title">Производители:</legend>
-            <ul>
+            <ul class="filter-label">
               <li>
                 <input type="checkbox" checked name="bosch" value="bosch" id="bosch">
                 <label for="bosch">bosch</label>
@@ -95,8 +106,8 @@
             </ul>
           </fieldset>
           <fieldset>
-              <legend>Питание:</legend>
-              <ul>
+              <legend class="aside-title">Питание:</legend>
+              <ul class="filter-label">
                 <li>
                   <input type="radio" name="source" value="accumulate" id="accumulate">
                   <label for="accumulate">Аккумуляторные</label>
@@ -113,12 +124,15 @@
         <div class="inner-content">
           <div class="sorting">
           <span>
-            <button>Сортировка:</button>
-            <button>По цене</button>
-            <button>По типу</button>
-            <button>По функционалу</button>
+          <span class="sorting-button purple">Фильтр:</span>
+          <div class="sorting-by">
+            <button class="sorting-button ">Сортировка:</button>
+            <button class="sorting-button red">По цене</button>
+            <button class="sorting-button">По типу</button>
+            <button class="sorting-button">По функционалу</button>
             <button class="sorting up"></button>
             <button class="sorting down"></button>
+            </div>
           </span>
           </div>
           <ul class="tools-list">
@@ -264,22 +278,34 @@
               <span class="price">12500 p.</span>
             </li>
           </ul>
+          <div class="basket-popup">
+             <button type="button" name="button" class="visually-hidden">Закрыть</button>
+             <span>Товар добавлен в корзину!</span>
+             <button type="button" name="button">Оформить заказ</button>
+             <button type="button" name="button">Продолжить покупки</button>
+          </div>
         </div>
+      </section>
+      <section class="inner-about">
+        <h2 class="section-heading"> Пара слов о перфораторах</h2>
+        <p class="inner-about-text">Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.
+        Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
+        </p>
       </section>
     </main>
     <footer class="page-footer">
       <div class="footer-top-line">
     <nav class="footer-nav">
         <ul class="footer-navigation">
-          <li><a href="company.html">Компания</a></li>
-          <li><a href="news.html">Новости</a></li>
-          <li><a href="catalog.html">Каталог</a></li>
-          <li><a href="delivery.html">Доставка</a></li>
-          <li><a href="contacts.html">Контакты</a></li>
-          <li><a href="materials.html">Материалы</a></li>
-          <li><a href="equipment.html">Техника</a></li>
-          <li><a href="tool.html">Инструмент</a></li>
-          <li><a href="specials.html">Спецпредложения</a></li>
+          <li><a href="company.html" class="lightblue">Компания</a></li>
+          <li><a href="news.html" class="lightblue">Новости</a></li>
+          <li><a href="catalog.html" class="lightblue">Каталог</a></li>
+          <li><a href="delivery.html" class="lightblue">Доставка</a></li>
+          <li><a href="contacts.html" class="lightblue">Контакты</a></li>
+          <li><a href="materials.html"  class="yellow">Материалы</a></li>
+          <li><a href="equipment.html"  class="yellow">Техника</a></li>
+          <li><a href="tool.html"  class="yellow">Инструмент</a></li>
+          <li><a href="specials.html"  class="yellow">Спецпредложения</a></li>
         </ul>
     </nav>
     <a href="#" class="logo">
@@ -297,15 +323,15 @@
     <div class="footer-social">
       <a class="social-button" href="#">
         <img src="./img/icon/vk-icon.svg" alt="Вконтакте">
-        <span>Вконтакте</span>
+        <span class="visually-hidden">Вконтакте</span>
       </a>
       <a class="social-button" href="#">
         <img src="./img/icon/fb-icon.svg" alt="Фейсбук">
-        <span>Фейсбук</span>
+        <span class="visually-hidden">Фейсбук</span>
       </a>
       <a class="social-button" href="#">
         <img src="./img/icon/insta-icon.svg" alt="Инстаграм">
-        <span>Инстаграм</span>
+        <span class="visually-hidden">Инстаграм</span>
       </a>
     </div>
     <div class="Feedback">
